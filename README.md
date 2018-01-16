@@ -1,4 +1,6 @@
 # Software-y-Calidad-de-Software
-ndwvjudnivniuv
-#aqui el Juan pasa SCS
 
+Integrantes del equipo:
+Vladimir
+Juan
+Ramon
