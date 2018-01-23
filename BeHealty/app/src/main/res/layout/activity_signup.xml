@@ -16,10 +16,10 @@
 
 
         <ImageView
+            android:id="@+id/imageView3"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            app:srcCompat="@drawable/unnamed"
-            android:id="@+id/imageView3" />
+            app:srcCompat="@drawable/behealthylogo" />
 
         <EditText
             android:id="@+id/email"

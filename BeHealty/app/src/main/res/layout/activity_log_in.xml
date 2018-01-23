@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/loginbackground"
     android:fitsSystemWindows="true"
     tools:context="mx.itesm.behealty.LogInActivity">
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="30dp"
@@ -28,7 +29,8 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="150dp"
-            android:layout_height="150dp" />
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/behealthylogo" />
 
         <!-- Login Button -->
 
@@ -38,7 +40,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="email "
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <EditText
             android:id="@+id/password"
@@ -47,17 +50,16 @@
 
             android:ems="10"
             android:hint="password "
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <Button
             android:id="@+id/btn_login"
-            android:layout_width="fill_parent"
-            android:layout_height="47dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
-            android:width="1dip"
-            android:background="?android:attr/colorPrimaryDark"
-            android:color="@color/common_google_signin_btn_text_dark_focused"
-            android:shape="oval"
+            android:background="@android:color/holo_blue_dark"
+            android:backgroundTint="@android:color/holo_blue_dark"
             android:text="LogIn"
             android:textColor="@android:color/white" />
 
