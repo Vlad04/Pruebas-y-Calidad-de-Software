@@ -118,7 +118,10 @@ public class Calendario extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         // do nothing.
-        Toast.makeText(getApplicationContext(), "Please select one day", Toast.LENGTH_SHORT).show();
+        Intent intent=new Intent(Calendario.this, LogInActivity.class);
+        startActivity(intent);
+
+        //Toast.makeText(getApplicationContext(), "Please select one day", Toast.LENGTH_SHORT).show();
     }
 
 
