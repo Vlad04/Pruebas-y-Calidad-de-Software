@@ -1,26 +1,31 @@
 package mx.itesm.behealty;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.ValueDependentColor;
+import com.jjoe64.graphview.series.BarGraphSeries;
+import com.jjoe64.graphview.series.DataPoint;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -67,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         get_peso=(TextView)findViewById(R.id.get_peso);
         get_edad=(TextView)findViewById(R.id.get_edad);
         get_estatura=(TextView)findViewById(R.id.get_estatura);
+        final GraphView graph = (GraphView) findViewById(R.id.graph);
 
 
         /*getCalentamiento=(TextView)findViewById(R.id.calentamiento_valor);
@@ -128,25 +134,70 @@ public class MainActivity extends AppCompatActivity {
 
         reference.addValueEventListener(new ValueEventListener() {
 
+            float IMC=0;
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Log.d("hey guy","im here");
                 int i = 0;
                 Log.d("number of childs",""+dataSnapshot.getChildrenCount());
 
                 for (DataSnapshot child : dataSnapshot.getChildren()) {
 
                     if (i < 10) {
-                        Log.d("hey guy","im here 2");
                         textViewsName.get(i).setText(child.getKey());
                         textViewsVal.get(i).setText(child.getValue().toString());
                         Log.d("User key", child.getKey());
                         Log.d("User ref", child.getRef().toString());
                         Log.d("User val", child.getValue().toString());
                         i++;
+                        Log.d("peso_graph",get_peso.getText().toString());
+                        Log.d("estatura_graph",get_estatura.getText().toString());
+                        Log.d("edad_graph",get_edad.getText().toString());
+                        //IMC=(Float.parseFloat(get_peso.getText().toString())/((Float.parseFloat(get_estatura.getText().toString()))*(Float.parseFloat(get_estatura.getText().toString()))));
+
                     }
 
+
                 }
+                float peso_graph=Float.parseFloat(get_peso.getText().toString());
+                float estatura_graph=Float.parseFloat(get_estatura.getText().toString());
+                float edad_graph=Float.parseFloat(get_edad.getText().toString());
+                Log.d("peso_graph_float",String.valueOf(peso_graph));
+                Log.d("estatura_graph_float",String.valueOf(estatura_graph));
+                Log.d("edad_graph_float",String.valueOf(edad_graph));
+                IMC=((estatura_graph)/(peso_graph*peso_graph));
+                Log.d("IMC", String.valueOf(IMC));
+
+                BarGraphSeries<DataPoint> series = new BarGraphSeries<>(new DataPoint[] {
+
+
+
+                        new DataPoint(0, IMC),
+                        new DataPoint(1, 14),
+                        new DataPoint(2, 15)
+
+                });
+
+                /*Log.d("peso_graph",get_peso.getText().toString());
+                Log.d("estatura_graph",get_estatura.getText().toString());
+                Log.d("edad_graph",get_edad.getText().toString());*/
+                //Log.d("IMC", String.valueOf(IMC));
+
+                graph.addSeries(series);
+
+// styling
+                series.setValueDependentColor(new ValueDependentColor<DataPoint>() {
+                    @Override
+                    public int get(DataPoint data) {
+                        return Color.rgb((int) data.getX()*255/4, (int) Math.abs(data.getY()*255/6), 100);
+                    }
+                });
+
+                series.setSpacing(50);
+
+// draw values on top
+                series.setDrawValuesOnTop(true);
+                series.setValuesOnTopColor(Color.RED);
+//series.setValuesOnTopSize(50);
             }
 
 
@@ -155,6 +206,18 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
