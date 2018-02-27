@@ -28,7 +28,27 @@
     <string name="btn_sign_out">Sign Out</string>
     <string name="lbl_forgot_password">Forgot password?</string>
     <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
+    <string-array name="sexo">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+    <string-array name="tiempo_sin_hacer_ejercicio">
+        <item>Activo</item>
+        <item>1-2 meses</item>
+        <item>3-4 meses</item>
+        <item>5-6 meses</item>
+        <item>7-8 meses</item>
+        <item>9-10 meses</item>
+        <item>11-12 meses</item>
+        <item>Más de un año</item>
+    </string-array>
 
+    <string-array name="objetivo">
+        <item>Bajar de peso</item>
+        <item>Tonificar</item>
+        <item>Ganar masa muscular</item>
+        <item>Mejorar condición física</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

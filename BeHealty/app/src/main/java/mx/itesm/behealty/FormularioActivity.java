@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.content.Context;
 import android.content.Intent;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -91,9 +93,14 @@ public class FormularioActivity extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
     private DatabaseReference Root_reference=firebaseDatabase.getReference();
 
+    EditText nombreUusario;
     EditText peso;
     EditText edad;
     EditText estatura;
+    Spinner sexo_spinner;
+    Spinner tiempo_sin_ejercicio;
+    Spinner objetivo_spinner;
+
     private FirebaseAuth auth;                  //Este es un objeto de tipo FIrebase
     String user = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
@@ -103,28 +110,48 @@ public class FormularioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
         formulario_terminado=(Button)findViewById(R.id.Formulario_terminado_button);
+        nombreUusario=(EditText)findViewById(R.id.NombreUsuario_EditText);
         peso=(EditText)findViewById(R.id.Peso_EditText);
         edad=(EditText)findViewById(R.id.Edad_TextView);
         estatura=(EditText)findViewById(R.id.Estatura_EditText);
-
+        sexo_spinner=(Spinner)findViewById(R.id.Sexo_spinner);
+        tiempo_sin_ejercicio=(Spinner)findViewById(R.id.Tiempo_sin_ejercicio_spinner);
+        objetivo_spinner=(Spinner)findViewById(R.id.Objetivo_spinner);
         final String peso_usuario = peso.getText().toString();
 
         formulario_terminado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                DatabaseReference nombreUusarioRef = Root_reference.child("Usuario "+user).child("Nombre de usuario ");
                 DatabaseReference peso_db = Root_reference.child("Usuario "+user).child("Peso ");
                 DatabaseReference estatura_db = Root_reference.child("Usuario "+user).child("Estatura ");
                 DatabaseReference edad_db = Root_reference.child("Usuario "+user).child("Edad ");
+                DatabaseReference sexo = Root_reference.child("Usuario "+user).child("Sexo ");
+                DatabaseReference tiempo_inactivo = Root_reference.child("Usuario "+user).child("Tiempo inactivo ");
+                DatabaseReference objetivo = Root_reference.child("Usuario "+user).child("Objetivo ");
 
+                nombreUusarioRef.setValue(nombreUusario.getText().toString());
                 peso_db.setValue(peso.getText().toString());
                 estatura_db.setValue(estatura.getText().toString());
                 edad_db.setValue(edad.getText().toString());
+                sexo.setValue(sexo_spinner.getSelectedItem().toString());
+                tiempo_inactivo.setValue(tiempo_sin_ejercicio.getSelectedItem().toString());
+                objetivo.setValue(objetivo_spinner.getSelectedItem().toString());
+
 
                 //Toast.makeText(getApplicationContext(),"peso "+ peso.getText().toString(),Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(FormularioActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
+
+        /*String[] opciones_sexo = new String[] {
+                "Masculini", "Femenino"
+        };
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, opciones_sexo);
+        adapter.setDropDownViewResource(android.R.layout.simple_spin‌​ner_dropdown_item);
+        sexo.setAdapter(adapter);*/
     }
 }

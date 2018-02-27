@@ -20,7 +20,7 @@
             android:layout_alignBottom="@+id/edad_textview"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="79dp"
-            android:text="TextView"
+            android:text="1.70"
             android:textColor="@color/colorPrimaryDark"
             tools:layout_editor_absoluteX="244dp"
             tools:layout_editor_absoluteY="141dp" />
@@ -34,7 +34,7 @@
             android:layout_below="@+id/edad_textview"
             android:layout_marginStart="36dp"
             android:layout_marginTop="33dp"
-            android:text="TextView"
+            android:text="Estatura"
             android:textColor="@color/colorPrimaryDark"
             tools:layout_editor_absoluteX="134dp"
             tools:layout_editor_absoluteY="255dp" />
@@ -59,7 +59,7 @@
             android:layout_alignBaseline="@+id/estatura_textview"
             android:layout_alignBottom="@+id/estatura_textview"
             android:layout_alignStart="@+id/get_peso"
-            android:text="TextView"
+            android:text="Bajar de peso"
             android:textColor="@color/colorPrimaryDark"
             tools:layout_editor_absoluteX="244dp"
             tools:layout_editor_absoluteY="205dp" />
@@ -72,7 +72,7 @@
             android:layout_alignBaseline="@+id/peso_textview"
             android:layout_alignBottom="@+id/peso_textview"
             android:layout_alignStart="@+id/get_edad"
-            android:text="TextView"
+            android:text="Vlad"
             android:textColor="@color/colorPrimaryDark"
             tools:layout_editor_absoluteX="250dp"
             tools:layout_editor_absoluteY="255dp" />
@@ -85,7 +85,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/peso_textview"
             android:layout_marginTop="49dp"
-            android:text="TextView"
+            android:text="Objetivo"
             android:textColor="@color/colorPrimaryDark"
             tools:layout_editor_absoluteX="134dp"
             tools:layout_editor_absoluteY="141dp" />
@@ -98,7 +98,7 @@
             android:layout_alignStart="@+id/peso_textview"
             android:layout_alignTop="@+id/peso_textview"
             android:layout_marginTop="52dp"
-            android:text="TextView"
+            android:text="Nombre de usuario"
             android:textColor="@color/colorPrimaryDark"
             tools:layout_editor_absoluteX="134dp"
             tools:layout_editor_absoluteY="205dp" />
@@ -106,14 +106,98 @@
         <com.jjoe64.graphview.GraphView
             android:id="@+id/graph"
             android:layout_width="368dp"
-            android:layout_marginTop="225dp"
             android:layout_height="200dp"
+            android:layout_above="@+id/Calendario_Button"
+            android:layout_centerHorizontal="true"
             tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="1dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            tools:layout_editor_absoluteY="1dp" />
+
+        <TextView
+            android:id="@+id/Sexo_textview"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/estatura_textview"
+            android:layout_below="@+id/estatura_textview"
+            android:layout_marginTop="25dp"
+            android:text="Peso"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/getSexo"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/Sexo_textview"
+            android:layout_alignEnd="@+id/get_estatura"
+            android:text="80"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/Objetivo_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/Sexo_textview"
+
+            android:layout_below="@+id/Sexo_textview"
+            android:layout_marginTop="17dp"
+            android:text="Tiempo inactivo"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/getObjetivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignBaseline="@+id/Objetivo_textview"
+            android:layout_alignBottom="@+id/Objetivo_textview"
+            android:layout_alignStart="@+id/getSexo"
+            android:text="Activo"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/TiempoInactivo_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_above="@+id/graph"
+            android:layout_alignStart="@+id/Objetivo_textview"
+            android:text="Sexo"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/getTiempoInactivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TiempoInactivo_textview"
+
+            android:layout_alignBottom="@+id/TiempoInactivo_textview"
+            android:layout_alignStart="@+id/getObjetivo"
+            android:text="Masculino"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/Usuario_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/get_edad"
+            android:layout_marginBottom="12dp"
+
+            android:layout_toEndOf="@+id/edad_textview"
+            android:text="Edad"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/getUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Usuario_textview"
+
+            android:layout_alignBottom="@+id/Usuario_textview"
+            android:layout_marginEnd="16dp"
+            android:layout_toStartOf="@+id/get_edad"
+            android:text="21"
+            android:textColor="@color/colorPrimaryDark" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_app"
+    android:background="@drawable/background_formulario"
     tools:context="mx.itesm.behealty.FormularioActivity">
 
     <RelativeLayout
@@ -18,71 +18,91 @@
             android:id="@+id/Tiempo_sin_ejercicio_spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/Objetivo_spinner"
             android:layout_alignParentStart="true"
-            android:backgroundTint="@android:color/holo_blue_dark"
-
-            android:layout_below="@+id/Sexo_spinner"
-            android:layout_marginTop="12dp" />
+            android:layout_marginBottom="47dp"
+            android:backgroundTint="#FFFFFF"
+            android:entries="@array/tiempo_sin_hacer_ejercicio"
+            android:spinnerMode="dialog" />
 
         <Spinner
             android:id="@+id/Objetivo_spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/Formulario_terminado_button"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/Tiempo_sin_ejercicio_spinner"
-            android:layout_marginTop="29dp" />
+            android:layout_marginBottom="37dp"
+            android:animateLayoutChanges="true"
+            android:backgroundTint="#FFFFFF"
+            android:entries="@array/objetivo"
+            android:popupBackground="#FFFFFF"
+            android:spinnerMode="dialog" />
 
         <Spinner
             android:id="@+id/Sexo_spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/holo_blue_dark"
-            android:spinnerMode="dialog"
+
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/Edad_TextView"
-            android:layout_marginTop="14dp"
-            android:textColor="@color/bg_register"
-             />
+            android:layout_centerVertical="true"
+            android:animateLayoutChanges="true"
+            android:backgroundTint="#FFFFFF"
+            android:entries="@array/sexo"
+            android:spinnerMode="dialog"
+            android:textColor="#FFFFFF" />
 
         <EditText
-            android:id="@+id/Peso_EditText"
-            android:backgroundTint="@android:color/holo_blue_dark"
+            android:id="@+id/NombreUsuario_EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="51dp"
+            android:layout_marginTop="43dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:ems="10"
+            android:hint="Nombre de usuario"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+        <EditText
+            android:id="@+id/Peso_EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Estatura_EditText"
+            android:layout_alignParentStart="true"
+            android:backgroundTint="@android:color/holo_blue_dark"
             android:ems="10"
             android:hint="Peso"
             android:inputType="textPersonName"
-            android:textColor="@color/bg_register"
-            android:textColorHint="@color/bg_register" />
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
 
         <EditText
             android:id="@+id/Estatura_EditText"
             android:layout_width="match_parent"
-            android:backgroundTint="@android:color/holo_blue_dark"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/Edad_TextView"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/Peso_EditText"
+            android:backgroundTint="@android:color/holo_blue_dark"
             android:ems="10"
-            android:hint="Estatura"
+            android:hint="Estatura (metros)"
             android:inputType="textPersonName"
-            android:textColor="@color/bg_register"
-            android:textColorHint="@color/bg_register" />
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
 
         <EditText
             android:id="@+id/Edad_TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/Sexo_spinner"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/Estatura_EditText"
+            android:layout_marginBottom="35dp"
             android:backgroundTint="@android:color/holo_blue_dark"
             android:ems="10"
             android:hint="Edad"
             android:inputType="textPersonName"
-            android:textColor="@color/bg_register"
-            android:textColorHint="@color/bg_register" />
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
 
         <Button
             android:id="@+id/Formulario_terminado_button"
