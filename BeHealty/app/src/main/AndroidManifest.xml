@@ -20,7 +20,9 @@
         <activity android:name=".SignupActivity" />
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".Calendario" />
-        <activity android:name=".GenerarPlan"></activity>
+        <activity android:name=".GenerarPlan" />
+        <activity android:name=".FormularioActivity" />
+        <activity android:name=".FeedActivity"></activity>
     </application>
 
 </manifest>
