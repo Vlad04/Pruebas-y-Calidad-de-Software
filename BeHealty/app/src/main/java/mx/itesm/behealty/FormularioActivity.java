@@ -3,6 +3,7 @@ package mx.itesm.behealty;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -28,6 +29,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.Normalizer;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -119,6 +121,7 @@ public class FormularioActivity extends AppCompatActivity {
         objetivo_spinner=(Spinner)findViewById(R.id.Objetivo_spinner);
         final String peso_usuario = peso.getText().toString();
 
+
         formulario_terminado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,10 +142,22 @@ public class FormularioActivity extends AppCompatActivity {
                 tiempo_inactivo.setValue(tiempo_sin_ejercicio.getSelectedItem().toString());
                 objetivo.setValue(objetivo_spinner.getSelectedItem().toString());
 
+                String estatura_string=estatura.getText().toString();
+                String validar= estatura_string.substring(0,estatura_string.indexOf('.'));
+                Log.d("========Y========",estatura_string);
 
+                Log.d("========X========",validar);
+                if(peso.length()>=3 || edad.length()>=3 || Integer.parseInt(validar)>=2)
+                {
+                    Toast.makeText(FormularioActivity.this,"Por favor ingrese los datos correctamente",Toast.LENGTH_SHORT).show();
+
+                }
+                else{
+                    Intent intent = new Intent(FormularioActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
                 //Toast.makeText(getApplicationContext(),"peso "+ peso.getText().toString(),Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(FormularioActivity.this, MainActivity.class);
-                startActivity(intent);
+
             }
         });
 

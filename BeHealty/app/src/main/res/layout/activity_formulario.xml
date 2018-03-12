@@ -73,7 +73,7 @@
             android:backgroundTint="@android:color/holo_blue_dark"
             android:ems="10"
             android:hint="Peso"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
 
@@ -86,7 +86,7 @@
             android:backgroundTint="@android:color/holo_blue_dark"
             android:ems="10"
             android:hint="Estatura (metros)"
-            android:inputType="textPersonName"
+            android:inputType="numberDecimal"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
 
@@ -100,7 +100,7 @@
             android:backgroundTint="@android:color/holo_blue_dark"
             android:ems="10"
             android:hint="Edad"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
 
