@@ -11,97 +11,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/get_edad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/edad_textview"
-
-            android:layout_alignBottom="@+id/edad_textview"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="79dp"
-            android:text="1.70"
-            android:textColor="@color/colorPrimaryDark"
-            tools:layout_editor_absoluteX="244dp"
-            tools:layout_editor_absoluteY="141dp" />
-
-        <TextView
-            android:id="@+id/peso_textview"
-            android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/edad_textview"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="33dp"
-            android:text="Estatura"
-            android:textColor="@color/colorPrimaryDark"
-            tools:layout_editor_absoluteX="134dp"
-            tools:layout_editor_absoluteY="255dp" />
-
         <Button
             android:id="@+id/Calendario_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/get_edad"
-            android:layout_marginBottom="27dp"
+
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@+id/user_textview_layout"
+            android:background="@drawable/button"
             android:text="Calendario"
+            tools:ignore="UnknownId"
             tools:layout_editor_absoluteX="41dp"
             tools:layout_editor_absoluteY="33dp" />
-
-        <TextView
-            android:id="@+id/get_estatura"
-            android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/estatura_textview"
-            android:layout_alignBottom="@+id/estatura_textview"
-            android:layout_alignStart="@+id/get_peso"
-            android:text="Bajar de peso"
-            android:textColor="@color/colorPrimaryDark"
-            tools:layout_editor_absoluteX="244dp"
-            tools:layout_editor_absoluteY="205dp" />
-
-        <TextView
-            android:id="@+id/get_peso"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_alignBaseline="@+id/peso_textview"
-            android:layout_alignBottom="@+id/peso_textview"
-            android:layout_alignStart="@+id/get_edad"
-            android:text="Vlad"
-            android:textColor="@color/colorPrimaryDark"
-            tools:layout_editor_absoluteX="250dp"
-            tools:layout_editor_absoluteY="255dp" />
-
-        <TextView
-            android:id="@+id/edad_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/peso_textview"
-            android:layout_marginTop="49dp"
-            android:text="Objetivo"
-            android:textColor="@color/colorPrimaryDark"
-            tools:layout_editor_absoluteX="134dp"
-            tools:layout_editor_absoluteY="141dp" />
-
-        <TextView
-            android:id="@+id/estatura_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_alignStart="@+id/peso_textview"
-            android:layout_alignTop="@+id/peso_textview"
-            android:layout_marginTop="52dp"
-            android:text="Nombre de usuario"
-            android:textColor="@color/colorPrimaryDark"
-            tools:layout_editor_absoluteX="134dp"
-            tools:layout_editor_absoluteY="205dp" />
 
         <com.jjoe64.graphview.GraphView
             android:id="@+id/graph"
@@ -113,91 +35,148 @@
             tools:layout_editor_absoluteY="1dp" />
 
         <TextView
-            android:id="@+id/Sexo_textview"
+            android:id="@+id/user_textview_layout"
             android:layout_width="wrap_content"
-
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/estatura_textview"
-            android:layout_below="@+id/estatura_textview"
+            android:layout_alignStart="@+id/edad_textview_layout"
+            android:layout_below="@+id/estatura_textview_layout"
+            android:layout_marginTop="14dp"
+            android:text="Edad"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/getUsuario_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/user_textview_layout"
+            android:layout_alignBottom="@+id/user_textview_layout"
+            android:layout_alignStart="@+id/get_estatura_layout"
+            android:text="21"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/peso_textview_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/graph"
+            android:layout_below="@+id/user_textview_layout"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="13dp"
+            android:text="Estautra"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/edad_textview_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/peso_textview_layout"
+            android:layout_below="@+id/peso_textview_layout"
+            android:layout_marginTop="11dp"
+            android:text="Objetivo"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/estatura_textview_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/peso_textview_layout"
+            android:layout_marginTop="25dp"
+            android:text="Nombre de Usuario"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/sexo_textview_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/peso_textview_layout"
+            android:layout_below="@+id/edad_textview_layout"
             android:layout_marginTop="25dp"
             android:text="Peso"
-            android:textColor="@color/colorPrimaryDark" />
+            android:textColor="@android:color/holo_blue_dark" />
 
         <TextView
-            android:id="@+id/getSexo"
-
+            android:id="@+id/tiempoInactivo_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/Sexo_textview"
-            android:layout_alignEnd="@+id/get_estatura"
-            android:text="80"
-            android:textColor="@color/colorPrimaryDark" />
-
-        <TextView
-            android:id="@+id/Objetivo_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/Sexo_textview"
-
-            android:layout_below="@+id/Sexo_textview"
-            android:layout_marginTop="17dp"
-            android:text="Tiempo inactivo"
-            android:textColor="@color/colorPrimaryDark" />
-
-        <TextView
-            android:id="@+id/getObjetivo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_alignBaseline="@+id/Objetivo_textview"
-            android:layout_alignBottom="@+id/Objetivo_textview"
-            android:layout_alignStart="@+id/getSexo"
-            android:text="Activo"
-            android:textColor="@color/colorPrimaryDark" />
-
-        <TextView
-            android:id="@+id/TiempoInactivo_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_above="@+id/graph"
-            android:layout_alignStart="@+id/Objetivo_textview"
+            android:layout_alignStart="@+id/sexo_textview_layout"
+            android:layout_below="@+id/sexo_textview_layout"
+            android:layout_marginTop="12dp"
             android:text="Sexo"
-            android:textColor="@color/colorPrimaryDark" />
+            android:textColor="@android:color/holo_blue_dark" />
 
         <TextView
-            android:id="@+id/getTiempoInactivo"
+            android:id="@+id/Objetivo_textview_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/TiempoInactivo_textview"
+            android:layout_alignStart="@+id/edad_textview_layout"
+            android:layout_below="@+id/tiempoInactivo_layout"
+            android:layout_marginTop="11dp"
+            android:text="Tiempo inactivo"
+            android:textColor="@android:color/holo_blue_dark" />
 
-            android:layout_alignBottom="@+id/TiempoInactivo_textview"
-            android:layout_alignStart="@+id/getObjetivo"
+        <TextView
+            android:id="@+id/get_peso_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/peso_textview_layout"
+            android:layout_alignBottom="@+id/peso_textview_layout"
+            android:layout_alignStart="@+id/getUsuario_layout"
+            android:text="1.70"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/get_edad_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/edad_textview_layout"
+            android:layout_alignBottom="@+id/edad_textview_layout"
+            android:layout_alignStart="@+id/get_peso_layout"
+            android:text="Bajar de peso"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/get_estatura_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/estatura_textview_layout"
+            android:layout_alignBottom="@+id/estatura_textview_layout"
+            android:layout_alignEnd="@+id/Calendario_Button"
+            android:layout_marginEnd="71dp"
+            android:text="vlad"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/getTiempo_Inactivo_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tiempoInactivo_layout"
+            android:layout_alignBottom="@+id/tiempoInactivo_layout"
+            android:layout_alignStart="@+id/getSexo_layout"
             android:text="Masculino"
-            android:textColor="@color/colorPrimaryDark" />
+            android:textColor="@android:color/holo_blue_dark" />
 
         <TextView
-            android:id="@+id/Usuario_textview"
+            android:id="@+id/getSexo_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/get_edad"
-            android:layout_marginBottom="12dp"
-
-            android:layout_toEndOf="@+id/edad_textview"
-            android:text="Edad"
-            android:textColor="@color/colorPrimaryDark" />
+            android:layout_alignBaseline="@+id/sexo_textview_layout"
+            android:layout_alignBottom="@+id/sexo_textview_layout"
+            android:layout_alignStart="@+id/getUsuario_layout"
+            android:text="80"
+            android:textColor="@android:color/holo_blue_dark" />
 
         <TextView
-            android:id="@+id/getUsuario"
+            android:id="@+id/getObjetivo_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/Usuario_textview"
+            android:layout_alignBaseline="@+id/Objetivo_textview_layout"
+            android:layout_alignBottom="@+id/Objetivo_textview_layout"
+            android:layout_alignEnd="@+id/getTiempo_Inactivo_layout"
+            android:layout_marginEnd="23dp"
+            android:text="5-6 meses"
+            android:textColor="@android:color/holo_blue_dark" />
 
-            android:layout_alignBottom="@+id/Usuario_textview"
-            android:layout_marginEnd="16dp"
-            android:layout_toStartOf="@+id/get_edad"
-            android:text="21"
-            android:textColor="@color/colorPrimaryDark" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

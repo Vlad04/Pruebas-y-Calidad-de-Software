@@ -19,31 +19,25 @@
 
         android:id="@+id/calendar"></CalendarView>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
 
-        android:orientation="vertical" >
+        android:layout_below="@+id/calendar"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
 
         <Button
-            android:text="Done"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="52dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:shape="oval"
-            android:textColor="@android:color/white"
-            android:background="@android:color/holo_red_light"
             android:id="@+id/Done_button"
-            android:layout_marginTop="34dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="109dp"
-            android:layout_marginStart="109dp" />
-    </LinearLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/button_calendario"
+            android:text="Done"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
 
 
 

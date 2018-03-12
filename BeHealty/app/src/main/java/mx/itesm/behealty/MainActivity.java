@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -27,7 +28,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button generate_plan, done_button;
+    Button generate_plan, Calendario_button;
     private String[] arraySpinner;
     Intent i;
     TextView peso;
@@ -72,21 +73,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         i = getIntent();
 
-        nombre_usuario=(TextView)findViewById(R.id.Usuario_textview);
-        peso=(TextView)findViewById(R.id.peso_textview);
-        edad=(TextView)findViewById(R.id.edad_textview);
-        estatura=(TextView)findViewById(R.id.estatura_textview);
-        sexo=(TextView)findViewById(R.id.Sexo_textview);
-        tiempo_inactivo=(TextView)findViewById(R.id.TiempoInactivo_textview);
-        objetivo=(TextView)findViewById(R.id.Objetivo_textview);
+        nombre_usuario=(TextView)findViewById(R.id.user_textview_layout);
+        peso=(TextView)findViewById(R.id.peso_textview_layout);
+        edad=(TextView)findViewById(R.id.edad_textview_layout);
+        estatura=(TextView)findViewById(R.id.estatura_textview_layout);
+        sexo=(TextView)findViewById(R.id.sexo_textview_layout);
+        tiempo_inactivo=(TextView)findViewById(R.id.tiempoInactivo_layout);
+        objetivo=(TextView)findViewById(R.id.Objetivo_textview_layout);
 
-        getNombre_usuario=(TextView)findViewById(R.id.getUsuario);
-        get_peso=(TextView)findViewById(R.id.get_peso);
-        get_edad=(TextView)findViewById(R.id.get_edad);
-        get_estatura=(TextView)findViewById(R.id.get_estatura);
-        getTiempo_inactivo=(TextView)findViewById(R.id.getTiempoInactivo);
-        getSexo=(TextView)findViewById(R.id.getSexo);
-        getObjetivo=(TextView)findViewById(R.id.getObjetivo);
+        getNombre_usuario=(TextView)findViewById(R.id.getUsuario_layout);
+        get_peso=(TextView)findViewById(R.id.get_peso_layout);
+        get_edad=(TextView)findViewById(R.id.get_edad_layout);
+        get_estatura=(TextView)findViewById(R.id.get_estatura_layout);
+        getTiempo_inactivo=(TextView)findViewById(R.id.getTiempo_Inactivo_layout);
+        getSexo=(TextView)findViewById(R.id.getSexo_layout);
+        getObjetivo=(TextView)findViewById(R.id.getObjetivo_layout);
+
+        Calendario_button=(Button)findViewById(R.id.Calendario_Button);
         final GraphView graph = (GraphView) findViewById(R.id.graph);
 
 
@@ -118,9 +121,9 @@ public class MainActivity extends AppCompatActivity {
 
         textViewsVal = new ArrayList<TextView>();
         textViewsVal.add(getNombre_usuario);
-        textViewsVal.add(get_edad);
         textViewsVal.add(get_peso);
         textViewsVal.add(get_estatura);
+        textViewsVal.add(get_edad);
         textViewsVal.add(getSexo);
         textViewsVal.add(getTiempo_inactivo);
         textViewsVal.add(getObjetivo);
@@ -189,20 +192,20 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-                //float peso_graph=Float.parseFloat(get_peso.getText().toString());
-                //float estatura_graph=Float.parseFloat(get_estatura.getText().toString());
-                //float edad_graph=Float.parseFloat(get_edad.getText().toString());
-                //Log.d("peso_graph_float",String.valueOf(peso_graph));
-                //Log.d("estatura_graph_float",String.valueOf(estatura_graph));
-                //Log.d("edad_graph_float",String.valueOf(edad_graph));
-                //IMC=((estatura_graph)/(peso_graph*peso_graph));
-                //Log.d("IMC", String.valueOf(IMC));
+                float peso_graph=Float.parseFloat(getSexo.getText().toString());
+                float estatura_graph=Float.parseFloat(get_peso.getText().toString());
+                float edad_graph=Float.parseFloat(getNombre_usuario.getText().toString());
+                Log.d("peso_graph_float",String.valueOf(peso_graph));
+                Log.d("estatura_graph_float",String.valueOf(estatura_graph));
+                Log.d("edad_graph_float",String.valueOf(edad_graph));
+                IMC=((peso_graph)/(estatura_graph*estatura_graph));
+                Log.d("IMC", String.valueOf(IMC));
 
                 BarGraphSeries<DataPoint> series = new BarGraphSeries<>(new DataPoint[] {
 
 
 
-                     //   new DataPoint(0, IMC),
+                        new DataPoint(0, IMC),
                         new DataPoint(1, 14),
                         new DataPoint(2, 15)
 
@@ -240,7 +243,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        Calendario_button.setOnClickListener(new View.OnClickListener(){
 
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Calendario.class);
+                startActivity(intent);
+            }
+        });
 
 
 

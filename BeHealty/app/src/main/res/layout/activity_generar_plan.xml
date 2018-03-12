@@ -7,4 +7,7 @@
     android:background="@drawable/background_app"
     tools:context="mx.itesm.behealty.GenerarPlan">
 
+    
+
+
 </android.support.constraint.ConstraintLayout>
