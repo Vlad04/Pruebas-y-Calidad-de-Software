@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
     ArrayList<TextView> textViewsVal;
     ArrayList<TextView> textViewsName;
 

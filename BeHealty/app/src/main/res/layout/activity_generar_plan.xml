@@ -9,6 +9,7 @@
     tools:context="mx.itesm.behealty.GenerarPlan">
 
 
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="120dp"
@@ -92,6 +93,7 @@
                 <Button
                     android:layout_width="match_parent"
                     android:background="@color/bg_main"
+                    android:id="@+id/Button_musculo1_layout"
                     android:text="Pecho"
                     android:layout_height="match_parent" />
             </android.support.constraint.ConstraintLayout>
@@ -141,9 +143,78 @@
                 <Button
                     android:layout_width="match_parent"
                     android:background="@color/bg_main"
+                    android:id="@+id/Button_musculo2_layout"
                     android:text="Biceps"
                     android:layout_height="match_parent" />
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
     </android.support.constraint.ConstraintLayout>
+
+    <!--
+    -->
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/space3"
+        android:layout_below="@id/ejercicio3"/>
+
+    <!--
+
+    -->
+
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:id="@+id/ejercicio4"
+        android:layout_below="@id/space3"
+        android:layout_height="wrap_content"
+        android:background="#F2F3F4">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/ejercicio4_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            tools:ignore="MissingConstraints,NotSibling"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/ejercicio4_constraintlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_main">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:background="@color/bg_main"
+                    android:text="Alimentación"
+                    android:layout_height="match_parent" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+    </android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@id/ejercicio4"
+        android:gravity="center|bottom"
+        android:layout_height="wrap_content">
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:layout_width="130dp"
+            android:id="@+id/progressBar_layout"
+            android:layout_marginTop="40dp"
+            app:cpb_progress="60"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            app:cpb_background_progressbar_color="@android:color/holo_blue_dark"
+            app:cpb_background_progressbar_width="6dp"
+            app:cpb_progressbar_color="#d8463e"
+            app:cpb_progressbar_width="10dp" />
+    </RelativeLayout>
+
+
 </RelativeLayout>

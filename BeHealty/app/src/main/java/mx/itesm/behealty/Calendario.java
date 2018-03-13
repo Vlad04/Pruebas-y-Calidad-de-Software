@@ -19,6 +19,7 @@ public class Calendario extends AppCompatActivity {
     Button Done;
     CalendarView calendar;
     String day="";
+    String musculo1, musculo2;
 
     @Override
 
@@ -45,26 +46,37 @@ public class Calendario extends AppCompatActivity {
                 if(dayOfWeek==1)
                 {
                     day="Sunday ";
+
                 }
                 else if(dayOfWeek==2)
                 {
                     day="Monday ";
+                    musculo1="Espalda";
+                    musculo2="Triceps";
                 }
                 else if(dayOfWeek==3)
                 {
                     day="Tuesday ";
+                    musculo1="Pecho";
+                    musculo2="Biceps";
                 }
                 else if(dayOfWeek==4)
                 {
                     day="Wednesday ";
+                    musculo1="Pierna";
+                    musculo2="Abdomen";
                 }
                 else if(dayOfWeek==5)
                 {
                     day="Thursday ";
+                    musculo1="Espalda";
+                    musculo2="Triceps";
                 }
                 else if(dayOfWeek==6)
                 {
                     day="Friday ";
+                    musculo1="Pecho";
+                    musculo2="Biceps";
                 }
                 else if(dayOfWeek==7)
                 {
@@ -80,7 +92,9 @@ public class Calendario extends AppCompatActivity {
 
 
                     Intent intent = new Intent(Calendario.this, GenerarPlan.class);
-                    intent.putExtra("current day", day);
+                    intent.putExtra("musculo1", musculo1);
+                    intent.putExtra("musculo2", musculo2);
+                    intent.putExtra("day", day);
                     startActivity(intent);
 
                     try {
