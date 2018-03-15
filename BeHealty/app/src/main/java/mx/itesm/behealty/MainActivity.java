@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        reference = database.getReference("Usuario "+user);
+        reference = database.getReference("User "+user);
 
 
 
@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-                float peso_graph=Float.parseFloat(getSexo.getText().toString());
+                float peso_graph=Float.parseFloat(getObjetivo.getText().toString());
                 float estatura_graph=Float.parseFloat(get_peso.getText().toString());
                 float edad_graph=Float.parseFloat(getNombre_usuario.getText().toString());
                 Log.d("peso_graph_float",String.valueOf(peso_graph));

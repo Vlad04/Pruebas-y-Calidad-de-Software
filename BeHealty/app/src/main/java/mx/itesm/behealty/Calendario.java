@@ -51,31 +51,31 @@ public class Calendario extends AppCompatActivity {
                 else if(dayOfWeek==2)
                 {
                     day="Monday ";
-                    musculo1="Espalda";
+                    musculo1="Back";
                     musculo2="Triceps";
                 }
                 else if(dayOfWeek==3)
                 {
                     day="Tuesday ";
-                    musculo1="Pecho";
+                    musculo1="Chest";
                     musculo2="Biceps";
                 }
                 else if(dayOfWeek==4)
                 {
                     day="Wednesday ";
-                    musculo1="Pierna";
+                    musculo1="Leg";
                     musculo2="Abdomen";
                 }
                 else if(dayOfWeek==5)
                 {
                     day="Thursday ";
-                    musculo1="Espalda";
+                    musculo1="Back";
                     musculo2="Triceps";
                 }
                 else if(dayOfWeek==6)
                 {
                     day="Friday ";
-                    musculo1="Pecho";
+                    musculo1="Chest";
                     musculo2="Biceps";
                 }
                 else if(dayOfWeek==7)

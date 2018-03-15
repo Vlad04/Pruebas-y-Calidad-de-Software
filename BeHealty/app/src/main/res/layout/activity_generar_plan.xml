@@ -41,9 +41,10 @@
             android:background="@color/bg_main">
 
             <Button
+                android:id="@+id/ejercicios_cardeovasculares_layout1"
                 android:layout_width="match_parent"
                 android:background="@color/bg_main"
-                android:text="Ejercicios cardiovasculares"
+                android:text="cardiovascular exersise"
                 android:layout_height="match_parent" />
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
@@ -193,28 +194,13 @@
                 <Button
                     android:layout_width="match_parent"
                     android:background="@color/bg_main"
-                    android:text="Alimentación"
+                    android:text="Nutrition"
                     android:layout_height="match_parent" />
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
     </android.support.constraint.ConstraintLayout>
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_below="@id/ejercicio4"
-        android:gravity="center|bottom"
-        android:layout_height="wrap_content">
-        <com.mikhaellopez.circularprogressbar.CircularProgressBar
-            android:layout_width="130dp"
-            android:id="@+id/progressBar_layout"
-            android:layout_marginTop="40dp"
-            app:cpb_progress="60"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="130dp"
-            app:cpb_background_progressbar_color="@android:color/holo_blue_dark"
-            app:cpb_background_progressbar_width="6dp"
-            app:cpb_progressbar_color="#d8463e"
-            app:cpb_progressbar_width="10dp" />
-    </RelativeLayout>
+
+
 
 
 </RelativeLayout>

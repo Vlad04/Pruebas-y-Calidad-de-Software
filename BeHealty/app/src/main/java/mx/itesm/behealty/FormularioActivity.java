@@ -126,13 +126,13 @@ public class FormularioActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                DatabaseReference nombreUusarioRef = Root_reference.child("Usuario "+user).child("Nombre de usuario ");
-                DatabaseReference peso_db = Root_reference.child("Usuario "+user).child("Peso ");
-                DatabaseReference estatura_db = Root_reference.child("Usuario "+user).child("Estatura ");
-                DatabaseReference edad_db = Root_reference.child("Usuario "+user).child("Edad ");
-                DatabaseReference sexo = Root_reference.child("Usuario "+user).child("Sexo ");
-                DatabaseReference tiempo_inactivo = Root_reference.child("Usuario "+user).child("Tiempo inactivo ");
-                DatabaseReference objetivo = Root_reference.child("Usuario "+user).child("Objetivo ");
+                DatabaseReference nombreUusarioRef = Root_reference.child("User "+user).child("Name of user ");
+                DatabaseReference peso_db = Root_reference.child("User "+user).child("Weight ");
+                DatabaseReference estatura_db = Root_reference.child("User "+user).child("Height ");
+                DatabaseReference edad_db = Root_reference.child("User "+user).child("Age ");
+                DatabaseReference sexo = Root_reference.child("User "+user).child("Sex ");
+                DatabaseReference tiempo_inactivo = Root_reference.child("User "+user).child("Inactive time ");
+                DatabaseReference objetivo = Root_reference.child("User "+user).child("Objective ");
 
                 nombreUusarioRef.setValue(nombreUusario.getText().toString());
                 peso_db.setValue(peso.getText().toString());
@@ -149,7 +149,7 @@ public class FormularioActivity extends AppCompatActivity {
                 Log.d("========X========",validar);
                 if(peso.length()>=3 || edad.length()>=3 || Integer.parseInt(validar)>=2)
                 {
-                    Toast.makeText(FormularioActivity.this,"Por favor ingrese los datos correctamente",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FormularioActivity.this,"Please enter the data correctly",Toast.LENGTH_SHORT).show();
 
                 }
                 else{

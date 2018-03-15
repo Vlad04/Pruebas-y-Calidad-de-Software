@@ -60,7 +60,7 @@
             android:layout_marginTop="43dp"
             android:backgroundTint="@android:color/holo_blue_dark"
             android:ems="10"
-            android:hint="Nombre de usuario"
+            android:hint="Name of user"
             android:inputType="textPersonName"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
@@ -72,7 +72,7 @@
             android:layout_alignParentStart="true"
             android:backgroundTint="@android:color/holo_blue_dark"
             android:ems="10"
-            android:hint="Peso"
+            android:hint="Weight"
             android:inputType="number"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
@@ -85,7 +85,7 @@
             android:layout_alignParentStart="true"
             android:backgroundTint="@android:color/holo_blue_dark"
             android:ems="10"
-            android:hint="Estatura (metros)"
+            android:hint="Height (meters)"
             android:inputType="numberDecimal"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
@@ -99,7 +99,7 @@
             android:layout_marginBottom="35dp"
             android:backgroundTint="@android:color/holo_blue_dark"
             android:ems="10"
-            android:hint="Edad"
+            android:hint="Age"
             android:inputType="number"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
@@ -112,7 +112,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="36dp"
             android:background="@drawable/button"
-            android:text="Continuar"
+            android:text="Continue"
             android:textSize="18sp"
             android:textStyle="bold" />
 

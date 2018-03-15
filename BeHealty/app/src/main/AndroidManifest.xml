@@ -22,7 +22,12 @@
         <activity android:name=".Calendario" />
         <activity android:name=".GenerarPlan" />
         <activity android:name=".FormularioActivity" />
-        <activity android:name=".FeedActivity"></activity>
+        <activity android:name=".FeedActivity" />
+        <activity android:name=".Rutina_example" />
+        <activity
+            android:name=".ScrollingActivityRutina"
+            android:label="@string/title_activity_scrolling_rutina"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -116,9 +116,14 @@ public class LogInActivity extends AppCompatActivity {
 
                                     //En el caso de que la autentificacion fue EXITOSA, envia al usuario a la clase llamada
                                     //SecondActivity
-                                    Intent intent = new Intent(LogInActivity.this, MainActivity.class);
-                                    startActivity(intent);
-                                    finish();
+                                    try {
+                                        Intent intent = new Intent(LogInActivity.this, MainActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    }catch (Exception e){
+                                        Toast.makeText(LogInActivity.this,"This functionality is not available",Toast.LENGTH_SHORT).show();
+                                    }
+
                                 }
                             }
                         });

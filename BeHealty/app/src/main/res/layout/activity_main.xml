@@ -20,7 +20,7 @@
             android:layout_marginBottom="16dp"
             android:layout_toEndOf="@+id/user_textview_layout"
             android:background="@drawable/button"
-            android:text="Calendario"
+            android:text="Calendar"
             tools:ignore="UnknownId"
             tools:layout_editor_absoluteX="41dp"
             tools:layout_editor_absoluteY="33dp" />
@@ -38,9 +38,9 @@
             android:id="@+id/user_textview_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/edad_textview_layout"
-            android:layout_below="@+id/estatura_textview_layout"
-            android:layout_marginTop="14dp"
+            android:layout_alignStart="@+id/tiempoInactivo_layout"
+            android:layout_below="@+id/sexo_textview_layout"
+            android:layout_marginTop="19dp"
             android:text="Edad"
             android:textColor="@android:color/holo_blue_dark" />
 
@@ -59,9 +59,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/graph"
-            android:layout_below="@+id/user_textview_layout"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="13dp"
+            android:layout_below="@+id/tiempoInactivo_layout"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="16dp"
             android:text="Estautra"
             android:textColor="@android:color/holo_blue_dark" />
 
@@ -69,9 +69,9 @@
             android:id="@+id/edad_textview_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/peso_textview_layout"
-            android:layout_below="@+id/peso_textview_layout"
-            android:layout_marginTop="11dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/sexo_textview_layout"
+            android:layout_marginTop="20dp"
             android:text="Objetivo"
             android:textColor="@android:color/holo_blue_dark" />
 
@@ -79,29 +79,29 @@
             android:id="@+id/estatura_textview_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/peso_textview_layout"
-            android:layout_marginTop="25dp"
+            android:layout_alignStart="@+id/user_textview_layout"
+            android:layout_below="@+id/edad_textview_layout"
+            android:layout_marginTop="17dp"
             android:text="Nombre de Usuario"
             android:textColor="@android:color/holo_blue_dark" />
 
         <TextView
             android:id="@+id/sexo_textview_layout"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/peso_textview_layout"
-            android:layout_below="@+id/edad_textview_layout"
-            android:layout_marginTop="25dp"
-            android:text="Peso"
+            android:layout_alignStart="@+id/user_textview_layout"
+            android:layout_below="@+id/estatura_textview_layout"
+            android:layout_marginTop="19dp"
+            android:text="Objective"
             android:textColor="@android:color/holo_blue_dark" />
 
         <TextView
             android:id="@+id/tiempoInactivo_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/sexo_textview_layout"
-            android:layout_below="@+id/sexo_textview_layout"
-            android:layout_marginTop="12dp"
+            android:layout_alignStart="@+id/peso_textview_layout"
+            android:layout_below="@+id/user_textview_layout"
+            android:layout_marginTop="20dp"
             android:text="Sexo"
             android:textColor="@android:color/holo_blue_dark" />
 
@@ -109,9 +109,9 @@
             android:id="@+id/Objetivo_textview_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/edad_textview_layout"
-            android:layout_below="@+id/tiempoInactivo_layout"
-            android:layout_marginTop="11dp"
+            android:layout_alignStart="@+id/peso_textview_layout"
+            android:layout_below="@+id/peso_textview_layout"
+            android:layout_marginTop="19dp"
             android:text="Tiempo inactivo"
             android:textColor="@android:color/holo_blue_dark" />
 
