@@ -143,4 +143,5 @@
     </string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_scrolling_rutina">ScrollingActivityRutina</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

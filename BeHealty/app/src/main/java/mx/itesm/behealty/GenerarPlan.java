@@ -25,20 +25,57 @@ public class GenerarPlan extends AppCompatActivity {
         Button musculo1_button=(Button)findViewById(R.id.Button_musculo1_layout);
         Button musculo2_button=(Button)findViewById(R.id.Button_musculo2_layout);
         Button ejercicios_cardeo1=(Button)findViewById(R.id.ejercicios_cardeovasculares_layout1);
+        Button nutricion=(Button)findViewById(R.id.Button_nutrition_layout);
+        Button map=(Button)findViewById(R.id.Button_map_layout);
 
         musculo1_button.setText(musculo1);
         musculo2_button.setText(musculo2);
 
+
+        //MUSCULO 1
         musculo1_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
 
             }
 
         });
 
-        musculo1_button.setOnClickListener(new View.OnClickListener() {
+        //MUSCULO 2
+        musculo2_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(GenerarPlan.this, ScrollingActivityRutina.class);
+                startActivity(intent);
+            }
+
+        });
+
+        //EJERCICIOS CARDEO
+        ejercicios_cardeo1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(GenerarPlan.this, ScrollingActivityRutina.class);
+                startActivity(intent);
+            }
+
+        });
+
+        //NUTRICION
+        nutricion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(GenerarPlan.this, ScrollingActivityRutina.class);
+                startActivity(intent);
+            }
+
+        });
+
+        //MAPA
+        map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
