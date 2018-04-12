@@ -1,5 +1,4 @@
 package mx.itesm.behealty;
-
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -31,8 +30,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.HashMap;
 import java.util.List;
-
-import mx.itesm.behealty.R;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
@@ -114,7 +111,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.setMyLocationEnabled(true);
         }
 
-        Button btnRestaurant = (Button) findViewById(R.id.ButtonRestaurant);
+        Button btnRestaurant = (Button) findViewById(R.id.buttonRestaurant);
         btnRestaurant.setOnClickListener(new View.OnClickListener() {
             String Restaurant = "restaurant";
             @Override
@@ -128,11 +125,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Log.d("onClick", url);
                 GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
                 getNearbyPlacesData.execute(DataTransfer);
-                Toast.makeText(MapsActivity.this,"Nearby Restaurants", Toast.LENGTH_LONG).show();
+                Toast.makeText(MapsActivity.this,"Nearby Gyms", Toast.LENGTH_LONG).show();
             }
         });
 
-        Button btnHospital = (Button) findViewById(R.id.btnHospital);
+        Button btnHospital = (Button) findViewById(R.id.buttonHospital);
         btnHospital.setOnClickListener(new View.OnClickListener() {
             String Hospital = "hospital";
             @Override
@@ -150,7 +147,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-        Button btnSchool = (Button) findViewById(R.id.btnSchool);
+        Button btnSchool = (Button) findViewById(R.id.buttonSchool);
         btnSchool.setOnClickListener(new View.OnClickListener() {
             String School = "school";
             @Override
@@ -167,7 +164,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Log.d("onClick", url);
                 GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
                 getNearbyPlacesData.execute(DataTransfer);
-                Toast.makeText(MapsActivity.this,"Nearby Schools", Toast.LENGTH_LONG).show();
+                Toast.makeText(MapsActivity.this,"Nearby Parks", Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -201,7 +198,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         googlePlacesUrl.append("&radius=" + PROXIMITY_RADIUS);
         googlePlacesUrl.append("&type=" + nearbyPlace);
         googlePlacesUrl.append("&sensor=true");
-        googlePlacesUrl.append("&key=" + "AIzaSyAVEkbLLJS24nQ4u2wBCuO2eby7Ma0CAA8");
+        googlePlacesUrl.append("&key=" + "AIzaSyATuUiZUkEc_UgHuqsBJa1oqaODI-3mLs0");
         Log.d("getUrl", googlePlacesUrl.toString());
         return (googlePlacesUrl.toString());
     }

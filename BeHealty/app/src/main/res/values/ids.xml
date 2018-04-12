@@ -2,5 +2,4 @@
 <resources>
     <item name="btn_back" type="id" />
     <item name="btnRestaurant" type="id" />
-    <item name="btnRestaurant" type="id" />
 </resources>

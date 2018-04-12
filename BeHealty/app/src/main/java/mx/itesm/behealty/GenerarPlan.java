@@ -79,7 +79,7 @@ public class GenerarPlan extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(GenerarPlan.this, ScrollingActivityRutina.class);
+                Intent intent = new Intent(GenerarPlan.this, MapsActivity.class);
                 startActivity(intent);
             }
 
