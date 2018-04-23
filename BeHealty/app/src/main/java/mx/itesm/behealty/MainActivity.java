@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
     TextView getObjetivo;
     TextView getNombre_usuario;
 
+    float peso_ideal=0;
+
 
 
     ArrayList<TextView> textViewsVal;
@@ -191,14 +193,61 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-                float peso_graph=Float.parseFloat(getObjetivo.getText().toString());
-                float estatura_graph=Float.parseFloat(get_peso.getText().toString());
-                float edad_graph=Float.parseFloat(getNombre_usuario.getText().toString());
-                Log.d("peso_graph_float",String.valueOf(peso_graph));
-                Log.d("estatura_graph_float",String.valueOf(estatura_graph));
-                Log.d("edad_graph_float",String.valueOf(edad_graph));
-                IMC=((peso_graph)/(estatura_graph*estatura_graph));
-                Log.d("IMC", String.valueOf(IMC));
+                try {
+                    float peso_graph = Float.parseFloat(getObjetivo.getText().toString());
+                    float estatura_graph = Float.parseFloat(get_peso.getText().toString());
+                    float edad_graph = Float.parseFloat(getNombre_usuario.getText().toString());
+                    Log.d("peso_graph_float", String.valueOf(peso_graph));
+                    Log.d("estatura_graph_float", String.valueOf(estatura_graph));
+                    Log.d("edad_graph_float", String.valueOf(edad_graph));
+                    IMC = ((peso_graph) / (estatura_graph * estatura_graph));
+                    Log.d("IMC", String.valueOf(IMC));
+                }catch(Exception e)
+                {
+                    float peso_graph = Float.parseFloat(getSexo.getText().toString());
+                    float estatura_graph = Float.parseFloat(get_peso.getText().toString());
+                    float edad_graph = Float.parseFloat(getNombre_usuario.getText().toString());
+                    Log.d("peso_graph_float", String.valueOf(peso_graph));
+                    Log.d("estatura_graph_float", String.valueOf(estatura_graph));
+                    Log.d("edad_graph_float", String.valueOf(edad_graph));
+                    IMC = ((peso_graph) / (estatura_graph * estatura_graph));
+                    Log.d("IMC", String.valueOf(IMC));
+
+                    Log.d("peso_graph",get_peso.getText().toString());
+                    Log.d("estatura_graph",get_estatura.getText().toString());
+                    Log.d("edad_graph",get_edad.getText().toString());
+                    Log.d("Nombre",getNombre_usuario.getText().toString());
+                    Log.d("sexo",getSexo.getText().toString());
+                    Log.d("tiempo inactivo",getTiempo_inactivo.getText().toString());
+                    Log.d("Objetivo",getObjetivo.getText().toString());
+
+                }
+
+                if(IMC<18.50f)
+                {
+                    //Infra peso
+                }
+                else if((IMC >= 18.50f) && (IMC<=24.99f))
+                {
+                    //Peso normal
+                }
+                else if((IMC>=25) && (IMC<=29.99))
+                {
+                    //Sobre peso
+                }
+                else if((IMC>=30) && (IMC<=34.99))
+                {
+                    //Obesidad leve
+                }
+                else if((IMC >= 35) && (IMC<=39.99))
+                {
+                    //Obesidad media
+                }
+                else if(IMC >= 40)
+                {
+                    //Obesidad morbida
+                }
+
 
                 BarGraphSeries<DataPoint> series = new BarGraphSeries<>(new DataPoint[] {
 

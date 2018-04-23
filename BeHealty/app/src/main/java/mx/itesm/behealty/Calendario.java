@@ -51,14 +51,14 @@ public class Calendario extends AppCompatActivity {
                 else if(dayOfWeek==2)
                 {
                     day="Monday ";
-                    musculo1="Back";
-                    musculo2="Triceps";
+                    musculo1="Chest";
+                    musculo2="Biceps";
                 }
                 else if(dayOfWeek==3)
                 {
                     day="Tuesday ";
-                    musculo1="Chest";
-                    musculo2="Biceps";
+                    musculo1="Back";
+                    musculo2="Triceps";
                 }
                 else if(dayOfWeek==4)
                 {
@@ -69,14 +69,14 @@ public class Calendario extends AppCompatActivity {
                 else if(dayOfWeek==5)
                 {
                     day="Thursday ";
-                    musculo1="Back";
-                    musculo2="Triceps";
+                    musculo1="Chest";
+                    musculo2="Biceps";
                 }
                 else if(dayOfWeek==6)
                 {
                     day="Friday ";
-                    musculo1="Chest";
-                    musculo2="Biceps";
+                    musculo1="Back";
+                    musculo2="Triceps";
                 }
                 else if(dayOfWeek==7)
                 {
