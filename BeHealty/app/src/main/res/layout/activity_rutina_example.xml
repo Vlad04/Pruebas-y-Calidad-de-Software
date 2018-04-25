@@ -11,6 +11,7 @@
     tools:context="mx.itesm.behealty.Rutina_example">
 
     <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/example_exercise_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/chest_press"

@@ -223,39 +223,90 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
+                int IMC_OPCION=0;
+                float PESO_IDEAL=0f;
+                float TIEMPO_ESPERADO=0f;
+
+                if((Float.parseFloat(get_peso.getText().toString())>=1.60)&&(Float.parseFloat(get_peso.getText().toString())<1.65))
+                {
+                    PESO_IDEAL=60f;
+                }
+                else if((Float.parseFloat(get_peso.getText().toString())>=1.65) && (Float.parseFloat(get_peso.getText().toString())<1.70))
+                {
+                    PESO_IDEAL=65f;
+                }
+                else if((Float.parseFloat(get_peso.getText().toString())>=1.70) && (Float.parseFloat(get_peso.getText().toString())<1.80))
+                {
+                    PESO_IDEAL=70f;
+                }
+                else if((Float.parseFloat(get_peso.getText().toString())>=1.80))
+                {
+                    PESO_IDEAL=75f;
+                }
+                /*
+
+                    IMC_OPCION=1 -> INFRA PESO
+                    IMC_OPCION=2 -> PESO NORMAL
+                    IMC_OPCION=3 -> SOBRE PESO
+                    IMC_OPCION=4 -> OBESIDAD LEVE
+                    IMC_OPCION=5 -> OBESIDAD MEDIA
+                    IMC_OPCION=6 -> OBESIDAD MORBIDA
+
+                 */
                 if(IMC<18.50f)
                 {
                     //Infra peso
+                    IMC_OPCION=1;
+                    TIEMPO_ESPERADO=60f;
+
                 }
                 else if((IMC >= 18.50f) && (IMC<=24.99f))
                 {
                     //Peso normal
+                    IMC_OPCION=2;
+                    TIEMPO_ESPERADO=30f;
+
+
                 }
-                else if((IMC>=25) && (IMC<=29.99))
+                else if((IMC>=25f) && (IMC<=29.99f))
                 {
                     //Sobre peso
+                    IMC_OPCION=3;
+                    TIEMPO_ESPERADO=50f;
+
+
                 }
-                else if((IMC>=30) && (IMC<=34.99))
+                else if((IMC>=30f) && (IMC<=34.99f))
                 {
                     //Obesidad leve
+                    IMC_OPCION=4;
+                    TIEMPO_ESPERADO=90f;
+
+
                 }
-                else if((IMC >= 35) && (IMC<=39.99))
+                else if((IMC >= 35f) && (IMC<=39.99f))
                 {
                     //Obesidad media
+                    IMC_OPCION=5;
+                    TIEMPO_ESPERADO=90f;
+
+
                 }
-                else if(IMC >= 40)
+                else if(IMC >= 40f)
                 {
                     //Obesidad morbida
+                    IMC_OPCION=6;
+                    TIEMPO_ESPERADO=100f;
+
+
                 }
 
 
                 BarGraphSeries<DataPoint> series = new BarGraphSeries<>(new DataPoint[] {
 
-
-
                         new DataPoint(0, IMC),
-                        new DataPoint(1, 14),
-                        new DataPoint(2, 15)
+                        new DataPoint(1, TIEMPO_ESPERADO),
+                        new DataPoint(2, PESO_IDEAL)
 
                 });
 
@@ -299,14 +350,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
-
-
-
-
 
     }
 

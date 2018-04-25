@@ -85,18 +85,18 @@
                     tools:ignore="MissingConstraints" />
 
 
-                <pl.droidsonroids.gif.GifImageView
-                    android:layout_width="99dp"
-                    android:layout_height="77dp"
+                <mx.itesm.behealty.GifImageView
+                    android:id="@+id/ejerciciogif1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/chest_press"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/SeeExample_exercise1_layout"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.907"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/SeeExample_exercise1_layout"
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
@@ -176,9 +176,12 @@
                     tools:ignore="MissingConstraints" />
 
 
-                <pl.droidsonroids.gif.GifImageView
-                    android:layout_width="99dp"
-                    android:layout_height="77dp"
+                <mx.itesm.behealty.GifImageView
+                    android:id="@+id/ejerciciogif2"
+
+
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
@@ -186,8 +189,7 @@
                     android:background="@drawable/chest_fly"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.907"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/SeeExample_Exercise2"
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
@@ -267,9 +269,10 @@
                     tools:ignore="MissingConstraints" />
 
 
-                <pl.droidsonroids.gif.GifImageView
-                    android:layout_width="99dp"
-                    android:layout_height="77dp"
+                <mx.itesm.behealty.GifImageView
+                    android:id="@+id/ejerciciogif3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
@@ -277,8 +280,7 @@
                     android:background="@drawable/chest_precc_incline"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.907"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/SeeExample_Exercise3"
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
@@ -357,9 +359,10 @@
                     tools:ignore="MissingConstraints" />
 
 
-                <pl.droidsonroids.gif.GifImageView
-                    android:layout_width="99dp"
-                    android:layout_height="77dp"
+                <mx.itesm.behealty.GifImageView
+                    android:id="@+id/ejerciciogif4"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
@@ -367,8 +370,7 @@
                     android:background="@drawable/push_up"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.907"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/SeeExample_Exercise4"
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
@@ -420,7 +422,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:ellipsize="end"
-                    android:text="Chest fly"
+                    android:text="Chest press"
                     android:textColor="#767676"
                     android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -448,18 +450,18 @@
                     tools:ignore="MissingConstraints" />
 
 
-                <pl.droidsonroids.gif.GifImageView
-                    android:layout_width="99dp"
-                    android:layout_height="77dp"
+                <mx.itesm.behealty.GifImageView
+                    android:id="@+id/ejerciciogif5"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/test"
+                    android:background="@drawable/chestpress"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.907"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/SeeExample_Exercise5"
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
@@ -512,7 +514,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:ellipsize="end"
-                    android:text="Chest fly"
+                    android:text="Chest last pull"
                     android:textColor="#767676"
                     android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -540,18 +542,18 @@
                     tools:ignore="MissingConstraints" />
 
 
-                <pl.droidsonroids.gif.GifImageView
-                    android:layout_width="99dp"
-                    android:layout_height="77dp"
+                <mx.itesm.behealty.GifImageView
+                    android:id="@+id/ejerciciogif6"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/test"
+                    android:background="@drawable/chestlatpull"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.907"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/SeeExample_Exercise6"
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
