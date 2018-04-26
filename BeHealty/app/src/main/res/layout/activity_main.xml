@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_app"
+    tools:context="mx.itesm.behealty.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/Calendario_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@+id/user_textview_layout"
+            android:background="@drawable/button"
+            android:text="Calendar"
+            tools:ignore="UnknownId"
+            tools:layout_editor_absoluteX="41dp"
+            tools:layout_editor_absoluteY="33dp" />
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/graph"
+
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/Objetivo_textview_layout"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1dp" />
+
+        <TextView
+            android:id="@+id/user_textview_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tiempoInactivo_layout"
+            android:layout_below="@+id/sexo_textview_layout"
+            android:layout_marginTop="19dp"
+            android:text="Edad"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/getUsuario_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/user_textview_layout"
+            android:layout_alignBottom="@+id/user_textview_layout"
+            android:layout_alignStart="@+id/get_estatura_layout"
+            android:text="21"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/peso_textview_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/graph"
+            android:layout_below="@+id/tiempoInactivo_layout"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="16dp"
+            android:text="Estautra"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/edad_textview_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/sexo_textview_layout"
+            android:layout_marginTop="20dp"
+            android:text="Objetivo"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/estatura_textview_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/user_textview_layout"
+            android:layout_below="@+id/edad_textview_layout"
+            android:layout_marginTop="17dp"
+            android:text="Nombre de Usuario"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/sexo_textview_layout"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/user_textview_layout"
+            android:layout_below="@+id/estatura_textview_layout"
+            android:layout_marginTop="19dp"
+            android:text="Objective"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/tiempoInactivo_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/peso_textview_layout"
+            android:layout_below="@+id/user_textview_layout"
+            android:layout_marginTop="20dp"
+            android:text="Sexo"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/Objetivo_textview_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/peso_textview_layout"
+            android:layout_below="@+id/peso_textview_layout"
+            android:layout_marginTop="19dp"
+            android:text="Tiempo inactivo"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/get_peso_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/peso_textview_layout"
+            android:layout_alignBottom="@+id/peso_textview_layout"
+            android:layout_alignStart="@+id/getUsuario_layout"
+            android:text="1.70"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/get_edad_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/edad_textview_layout"
+            android:layout_alignBottom="@+id/edad_textview_layout"
+            android:layout_alignStart="@+id/get_peso_layout"
+            android:text="Bajar de peso"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/get_estatura_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/estatura_textview_layout"
+            android:layout_alignBottom="@+id/estatura_textview_layout"
+            android:layout_alignEnd="@+id/Calendario_Button"
+            android:layout_marginEnd="71dp"
+            android:text="vlad"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/getTiempo_Inactivo_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tiempoInactivo_layout"
+            android:layout_alignBottom="@+id/tiempoInactivo_layout"
+            android:layout_alignStart="@+id/getSexo_layout"
+            android:text="Masculino"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/getSexo_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/sexo_textview_layout"
+            android:layout_alignBottom="@+id/sexo_textview_layout"
+            android:layout_alignStart="@+id/getUsuario_layout"
+            android:text="80"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/getObjetivo_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Objetivo_textview_layout"
+            android:layout_alignBottom="@+id/Objetivo_textview_layout"
+            android:layout_alignEnd="@+id/getTiempo_Inactivo_layout"
+            android:layout_marginEnd="23dp"
+            android:text="5-6 meses"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@+id/graph"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:paddingStart="50dp"
+                android:layout_height="wrap_content"
+                android:text="IMC"
+                android:textColor="@color/bg_register"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingStart="30dp"
+                android:layout_marginStart="126dp"
+                android:text="Expected time"
+                android:textColor="@color/bg_register"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="12dp"
+                android:text="Ideal weight"
+                android:textColor="@color/bg_register"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

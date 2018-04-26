@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/background_formulario"
+    tools:context="mx.itesm.behealty.GenerarPlan">
+
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/space0"/>
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/space0"
+        android:id="@+id/ejercicio1"
+        android:background="#F2F3F4">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/ejercicio1_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        tools:ignore="MissingConstraints,NotSibling"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/ejercicio1_constraintlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_main">
+
+            <Button
+                android:id="@+id/ejercicios_cardeovasculares_layout1"
+                android:layout_width="match_parent"
+                android:background="@color/bg_main"
+                android:text="cardiovascular exersise"
+                android:layout_height="match_parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+    </android.support.constraint.ConstraintLayout>
+
+    <!--
+
+
+    -->
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/space"
+        android:layout_below="@id/ejercicio1"/>
+
+    <!--
+
+
+    -->
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:id="@+id/ejercicio2"
+        android:layout_below="@id/space"
+        android:layout_height="wrap_content"
+        android:background="#F2F3F4">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/ejercicio2_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            tools:ignore="MissingConstraints,NotSibling"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/ejercicio2_constraintlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_main">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:background="@color/bg_main"
+                    android:id="@+id/Button_musculo1_layout"
+                    android:text="Pecho"
+                    android:layout_height="match_parent" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+    </android.support.constraint.ConstraintLayout>
+
+    <!--
+    -->
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/space2"
+        android:layout_below="@id/ejercicio2"/>
+
+    <!--
+
+    -->
+
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:id="@+id/ejercicio3"
+        android:layout_below="@id/space2"
+        android:layout_height="wrap_content"
+        android:background="#F2F3F4">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/ejercicio3_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            tools:ignore="MissingConstraints,NotSibling"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/ejercicio3_constraintlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_main">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:background="@color/bg_main"
+                    android:id="@+id/Button_musculo2_layout"
+                    android:text="Biceps"
+                    android:layout_height="match_parent" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+    </android.support.constraint.ConstraintLayout>
+
+    <!--
+    -->
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/space3"
+        android:layout_below="@id/ejercicio3"/>
+
+    <!--
+
+    -->
+
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:id="@+id/ejercicio4"
+        android:layout_below="@id/space3"
+        android:layout_height="wrap_content"
+        android:background="#F2F3F4">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/ejercicio4_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            tools:ignore="MissingConstraints,NotSibling"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/ejercicio4_constraintlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_main">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:background="@color/bg_main"
+                    android:id="@+id/Button_nutrition_layout"
+                    android:text="Nutrition"
+                    android:layout_height="match_parent" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+    </android.support.constraint.ConstraintLayout>
+
+    <!--
+       -->
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/space4"
+        android:layout_below="@id/ejercicio4"/>
+
+    <!--
+
+    -->
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:id="@+id/ejercicio5"
+        android:layout_below="@id/space4"
+        android:layout_height="wrap_content"
+        android:background="#F2F3F4">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/ejercicio5_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            tools:ignore="MissingConstraints,NotSibling"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/ejercicio5_constraintlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_main">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:background="@color/bg_main"
+                    android:id="@+id/Button_map_layout"
+                    android:text="MAP"
+                    android:layout_height="match_parent" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+    </android.support.constraint.ConstraintLayout>
+
+
+</RelativeLayout>
