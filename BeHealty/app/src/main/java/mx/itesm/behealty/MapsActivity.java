@@ -113,7 +113,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         Button btnRestaurant = (Button) findViewById(R.id.buttonRestaurant);
         btnRestaurant.setOnClickListener(new View.OnClickListener() {
-            String Restaurant = "gym";
+            String Restaurant = "Gym";
             @Override
             public void onClick(View v) {
                 Log.d("onClick", "Button is Clicked");
@@ -132,7 +132,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         Button btnHospital = (Button) findViewById(R.id.buttonHospital);
         btnHospital.setOnClickListener(new View.OnClickListener() {
-            String Hospital = "hospital";
+            String Hospital = "Hospital";
             @Override
             public void onClick(View v) {
                 Log.d("onClick", "Button is Clicked");
@@ -150,7 +150,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         Button btnSchool = (Button) findViewById(R.id.buttonSchool);
         btnSchool.setOnClickListener(new View.OnClickListener() {
-            String School = "parks";
+            String School = "Parks";
             @Override
             public void onClick(View v) {
                 Log.d("onClick", "Button is Clicked");
@@ -158,7 +158,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if (mCurrLocationMarker != null) {
                     mCurrLocationMarker.remove();
                 }
-                String url = getUrl(20.735008, -103.454912, School);
+                String url = getUrl(20.735007, -103.454912, School);
                 Object[] DataTransfer = new Object[2];
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
