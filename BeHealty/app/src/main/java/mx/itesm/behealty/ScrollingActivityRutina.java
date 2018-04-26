@@ -16,7 +16,8 @@ import pl.droidsonroids.gif.GifDrawable;
 
 public class ScrollingActivityRutina extends AppCompatActivity {
     int count=10;
-
+    String image_opcion_counter="0";
+    String posicion_see_more_counter="0";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,12 @@ public class ScrollingActivityRutina extends AppCompatActivity {
         final CircularProgressBar circularProgressBar = (CircularProgressBar)findViewById(R.id.progressBar_layout);
 
         TextView seeExample=(TextView)findViewById(R.id.SeeExample_exercise1_layout);
+        TextView seeExample2=(TextView)findViewById(R.id.SeeExample_Exercise2);
+        TextView seeExample3=(TextView)findViewById(R.id.SeeExample_Exercise3);
+        TextView seeExample4=(TextView)findViewById(R.id.SeeExample_Exercise4);
+        TextView seeExample5=(TextView)findViewById(R.id.SeeExample_Exercise5);
+        TextView seeExample6=(TextView)findViewById(R.id.SeeExample_Exercise6);
+
         TextView progress = (TextView)findViewById(R.id.Progress_textview);
         GifImageView exercise1 =(GifImageView)findViewById(R.id.ejerciciogif1);
         GifImageView exercise2 =(GifImageView)findViewById(R.id.ejerciciogif2);
@@ -69,7 +76,7 @@ public class ScrollingActivityRutina extends AppCompatActivity {
             exercise4_textview.setText("Romanian deadlifts");
             exercise5_textview.setText("Back reverence");
             exercise6_textview.setText("Dip chin assist");
-
+            image_opcion_counter="1";
 
 
 
@@ -89,8 +96,10 @@ public class ScrollingActivityRutina extends AppCompatActivity {
             exercise4_textview.setText("Triceps extension");
             exercise5_textview.setText("Push down");
             exercise6_textview.setText("Triceps press inclined");
+            image_opcion_counter="2";
+
         }
-        //Triceps
+        //Chest
         else if((musculo1.equals("Chest") && musculo2.equals("Biceps"))&&(musculo_opcion.equals("0"))) {
             exercise1.setGifImageResource(R.drawable.chest_press);
             exercise2.setGifImageResource(R.drawable.chest_fly);
@@ -105,6 +114,9 @@ public class ScrollingActivityRutina extends AppCompatActivity {
             exercise4_textview.setText("Push up");
             exercise5_textview.setText("Chest press");
             exercise6_textview.setText("Chest latpull");
+
+            image_opcion_counter="3";
+
         }
         //Biceps
         else if((musculo1.equals("Chest") && musculo2 .equals("Biceps"))&&(musculo_opcion.equals("1"))) {
@@ -121,6 +133,9 @@ public class ScrollingActivityRutina extends AppCompatActivity {
             exercise4_textview.setText("Barbell curl");
             exercise5_textview.setText("Biceps dips");
             exercise6_textview.setText("Biceps press");
+
+            image_opcion_counter="4";
+
         }
         //Leg
         else if((musculo1.equals("Leg") && musculo2 .equals("Abdomen"))&&(musculo_opcion.equals("0"))) {
@@ -137,6 +152,9 @@ public class ScrollingActivityRutina extends AppCompatActivity {
             exercise4_textview.setText("Seated Leg Extension");
             exercise5_textview.setText("Squat");
             exercise6_textview.setText("Seamstress");
+
+            image_opcion_counter="5";
+
         }
         //Abdomen
         else if((musculo1.equals("Leg") && musculo2 .equals("Abdomen"))&&(musculo_opcion.equals("1"))) {
@@ -153,6 +171,9 @@ public class ScrollingActivityRutina extends AppCompatActivity {
             exercise4_textview.setText("Seated Leg Extension");
             exercise5_textview.setText("Abs declined");
             exercise6_textview.setText("Jump");
+
+            image_opcion_counter="6";
+
         }
 
         progress.setOnClickListener(new View.OnClickListener() {
@@ -165,12 +186,70 @@ public class ScrollingActivityRutina extends AppCompatActivity {
         seeExample.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                posicion_see_more_counter="1";
                 Intent intent = new Intent(ScrollingActivityRutina.this, Rutina_example.class);
+                intent.putExtra("image_opcion", image_opcion_counter);
+                intent.putExtra("posicion_see_more_counter", posicion_see_more_counter);
                 startActivity(intent);
             }
         });
 
+        seeExample2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                posicion_see_more_counter="2";
+                Intent intent = new Intent(ScrollingActivityRutina.this, Rutina_example.class);
+                intent.putExtra("image_opcion", image_opcion_counter);
+                intent.putExtra("posicion_see_more_counter", posicion_see_more_counter);
+                startActivity(intent);
+            }
+        });
 
+        seeExample3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                posicion_see_more_counter="3";
+                Intent intent = new Intent(ScrollingActivityRutina.this, Rutina_example.class);
+                intent.putExtra("image_opcion", image_opcion_counter);
+                intent.putExtra("posicion_see_more_counter", posicion_see_more_counter);
+                startActivity(intent);
+            }
+        });
+
+        seeExample4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                posicion_see_more_counter="4";
+                Intent intent = new Intent(ScrollingActivityRutina.this, Rutina_example.class);
+                intent.putExtra("image_opcion", image_opcion_counter);
+                intent.putExtra("posicion_see_more_counter", posicion_see_more_counter);
+
+                startActivity(intent);
+            }
+        });
+
+        seeExample5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                posicion_see_more_counter="5";
+                Intent intent = new Intent(ScrollingActivityRutina.this, Rutina_example.class);
+                intent.putExtra("image_opcion", image_opcion_counter);
+                intent.putExtra("posicion_see_more_counter", posicion_see_more_counter);
+                startActivity(intent);
+            }
+        });
+
+        seeExample6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                posicion_see_more_counter="6";
+                Intent intent = new Intent(ScrollingActivityRutina.this, Rutina_example.class);
+                intent.putExtra("image_opcion", image_opcion_counter);
+                intent.putExtra("posicion_see_more_counter", posicion_see_more_counter);
+
+                startActivity(intent);
+            }
+        });
         /*
         circularProgressBar.setProgressWithAnimation(count);
                 count=count+10;

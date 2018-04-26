@@ -84,20 +84,22 @@
                     app:layout_constraintTop_toBottomOf="@+id/ExerciseName_layout"
                     tools:ignore="MissingConstraints" />
 
+                <!--<RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="80dp"
+                    android:background="#000000"></RelativeLayout>-->
+
 
                 <mx.itesm.behealty.GifImageView
                     android:id="@+id/ejerciciogif1"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_width="3dp"
+                    android:layout_height="4dp"
+
+                    android:layout_marginStart="32dp"
                     android:background="@drawable/chest_press"
-                    app:layout_constraintBottom_toBottomOf="@+id/SeeExample_exercise1_layout"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/SeeExample_exercise1_layout"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    tools:layout_editor_absoluteY="50dp"
+                    app:layout_editor_absoluteX="50dp"/>
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
 
@@ -522,8 +524,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/Exercise6_textview_layout"
                     tools:ignore="MissingConstraints" />
 
-
-
                 <TextView
                     android:id="@+id/SeeExample_Exercise6"
                     android:layout_width="wrap_content"
@@ -557,8 +557,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
-
-
 
     </FrameLayout>
 

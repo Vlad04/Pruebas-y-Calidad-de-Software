@@ -10,10 +10,10 @@
     android:background="#FFFFFF"
     tools:context="mx.itesm.behealty.Rutina_example">
 
-    <pl.droidsonroids.gif.GifImageView
+    <mx.itesm.behealty.GifImageView
         android:id="@+id/example_exercise_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="450dp"
+        android:layout_height="420dp"
         android:src="@drawable/chest_press"
 
         />
