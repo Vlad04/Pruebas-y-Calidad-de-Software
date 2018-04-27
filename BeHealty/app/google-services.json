@@ -1,35 +1,27 @@
 {
   "project_info": {
-    "project_number": "178505623846",
-    "firebase_url": "https://behealthy-89c97.firebaseio.com",
-    "project_id": "behealthy-89c97",
-    "storage_bucket": "behealthy-89c97.appspot.com"
+    "project_number": "110237281491",
+    "firebase_url": "https://behealthy-myapp.firebaseio.com",
+    "project_id": "behealthy-myapp",
+    "storage_bucket": "behealthy-myapp.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:178505623846:android:8ee477756064d7c1",
+        "mobilesdk_app_id": "1:110237281491:android:8ee477756064d7c1",
         "android_client_info": {
           "package_name": "mx.itesm.behealty"
         }
       },
       "oauth_client": [
         {
-          "client_id": "178505623846-bnuol8pr1as3ui480hul2eekg5fdrvjo.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "mx.itesm.behealty",
-            "certificate_hash": "e0aa5db6d75a3049d26e10bb3bd10b3a4929106e"
-          }
-        },
-        {
-          "client_id": "178505623846-1fuc2aooe6sc42unk4g809gq5mo1phb1.apps.googleusercontent.com",
+          "client_id": "110237281491-ra7r062bbv3vjiefdrsg508ajckj3v42.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBqXT8OVPZzmlyf2RJTNwQFjSRZjLKeuPM"
+          "current_key": "AIzaSyBpcBGe4MX-_oJn78RAdyaGzzO8uzOnQvw"
         }
       ],
       "services": {
@@ -37,13 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "178505623846-1fuc2aooe6sc42unk4g809gq5mo1phb1.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
