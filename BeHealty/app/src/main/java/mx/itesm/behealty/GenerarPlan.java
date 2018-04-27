@@ -67,8 +67,8 @@ public class GenerarPlan extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                /*Intent intent = new Intent(GenerarPlan.this, ScrollingActivityRutina.class);
-                startActivity(intent);*/
+                Intent intent = new Intent(GenerarPlan.this, Cardeo.class);
+                startActivity(intent);
             }
 
         });
@@ -78,8 +78,8 @@ public class GenerarPlan extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(GenerarPlan.this, ScrollingActivityRutina.class);
-                startActivity(intent);
+                /*Intent intent = new Intent(GenerarPlan.this, Nutrition.class);
+                startActivity(intent);*/
             }
 
         });
